@@ -16,5 +16,10 @@ namespace DataSourceApp
         {
             InitializeComponent();
         }
+
+        private void adressBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

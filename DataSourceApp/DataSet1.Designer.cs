@@ -264,21 +264,6 @@ namespace DataSourceApp {
             base.Tables.Add(this.tableAdress);
             this.tableVisits = new VisitsDataTable();
             base.Tables.Add(this.tableVisits);
-            global::System.Data.ForeignKeyConstraint fkc;
-            fkc = new global::System.Data.ForeignKeyConstraint("Person_Visits", new global::System.Data.DataColumn[] {
-                        this.tableVisits.PersonIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tablePerson.IDColumn});
-            this.tablePerson.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_Person_Adress", new global::System.Data.DataColumn[] {
-                        this.tablePerson.AdressIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableAdress.IDColumn});
-            this.tableAdress.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             this.relationPerson_Visits = new global::System.Data.DataRelation("Person_Visits", new global::System.Data.DataColumn[] {
                         this.tableVisits.PersonIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePerson.IDColumn}, false);
